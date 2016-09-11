@@ -17,7 +17,7 @@ hpc$Sub_metering_3 <- as.numeric(as.character(hpc$Sub_metering_3))
 par(mfrow = c(1, 1))
 hpc_subset <- filter(hpc, Date == "2007-02-01" | Date == "2007-02-02")
 hist(hpc_subset$Global_active_power, breaks = 12, col = "red", xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
-dev.copy(png, file = "plot1.png")
+dev.copy(png, file = "plot1.png", height=480, width=480)
 dev.off()
 
 

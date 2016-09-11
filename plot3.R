@@ -28,7 +28,7 @@ with(subset(hpc_melt, variable == "Sub_metering_1"), lines(DateTime, value, col 
 with(subset(hpc_melt, variable == "Sub_metering_2"), lines(DateTime, value, col = "red"))
 with(subset(hpc_melt, variable == "Sub_metering_3"), lines(DateTime, value, col = "blue"))
 legend("topright", col = c("black", "blue", "red"), lty = c(1,1), bty = "n", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), inset=c(0.12, 0), y.intersp = 2)
-dev.copy(png, file = "plot3.png")
+dev.copy(png, file = "plot3.png", height=480, width=480)
 dev.off()
 
 

@@ -32,6 +32,6 @@ with(subset(hpc_melt, variable == "Sub_metering_2"), lines(DateTime, value, col 
 with(subset(hpc_melt, variable == "Sub_metering_3"), lines(DateTime, value, col = "blue"))
 legend("topright", col = c("black", "blue", "red"), lty = c(1,1), bty = "n", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), inset=c(0.25, 0), y.intersp = 2)
 plot(hpc_subset$DateTime, hpc_subset$Global_reactive_power, type = "l", xlab = "datetime", ylab = "Global_reactive_power")
-dev.copy(png, file = "plot4.png")
+dev.copy(png, file = "plot4.png", height=480, width=480)
 dev.off()
 

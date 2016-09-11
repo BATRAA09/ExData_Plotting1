@@ -19,7 +19,7 @@ hpc$Sub_metering_3 <- as.numeric(as.character(hpc$Sub_metering_3))
 par(mfrow = c(1,1))
 hpc_subset <- hpc[hpc$Date == "2007-02-01" | hpc$Date == "2007-02-02",]
 plot(hpc_subset$DateTime, hpc_subset$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
-dev.copy(png, file = "plot2.png")
+dev.copy(png, file = "plot2.png", height=480, width=480)
 dev.off()
 
 
